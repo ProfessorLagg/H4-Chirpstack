@@ -9,8 +9,8 @@ SET pihostname=192.168.99.36
 
 echo %timestamp% > ".\version.txt"
 
-git add -A && git commit -m "auto-pre-%timestamp%"
+::git add -A && git commit -m "auto-pre-%timestamp%"
 scp -r pi@%pihostname%:/home/pi/IoT3/ .\
 move -y .\IoT3 .\AutoSetup
-git add -A && git commit -m "auto-post-%timestamp%" && git push
+git add -A && git commit -m "auto-%timestamp%" && git push
 pause
