@@ -17,23 +17,6 @@ Get-ChildItem -Path ".\IoT3" | %{
 }
 
 Remove-Item -Path ".\IoT3" -Force -Recurse
-&git add -A
-&git commit -m "auto-$($timestamp)"
-&git push
-
-#@ECHO OFF
-#cd %~dp0
-#
-#FOR /F "tokens=* USEBACKQ" %%F IN (`powershell -Command "return [DateTime]::Now.ToString('yyyyMMdd\THHmmss')"`) DO (
-#SET timestamp=%%F
-#)
-#
-#SET piusername=pi
-#SET pihostname=192.168.99.36
-#
-#echo %timestamp% > ".\version.txt"
-#
-#scp -r %piusername%@%pihostname%:/home/pi/IoT3/ .\
-#:: move /y IoT3 .
-#:: git add -A && git commit -m "auto-%timestamp%" && git push
-#pause
+&	git add -A
+&	git commit -m "auto-$($timestamp)"
+&	git push
