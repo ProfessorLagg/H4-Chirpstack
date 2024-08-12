@@ -1,0 +1,1 @@
+PowerShell -file ".\gitpush.ps1" >> gitpush.log
