@@ -11,6 +11,6 @@ echo %timestamp% > ".\version.txt"
 
 ::git add -A && git commit -m "auto-pre-%timestamp%"
 scp -r pi@%pihostname%:/home/pi/IoT3/ .\
-move -y .\IoT3 .\AutoSetup
+move /y IoT3 AutoSetup
 git add -A && git commit -m "auto-%timestamp%" && git push
 pause
